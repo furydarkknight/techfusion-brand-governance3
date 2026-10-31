@@ -14,11 +14,18 @@
 
 ## 🚀 Live Demo & Quick Start
 
+### 🌐 Live Application
+- **Live URL:** [https://techfusion-brand-governance3.onrender.com/](https://techfusion-brand-governance3.onrender.com/)
+
+> [!NOTE]
+> **First Load Notice (Render Cold Start):**  
+> Since the application is deployed on Render's free tier, the instance automatically spins down during inactivity. Please allow approximately **50 seconds** for the server to wake up on the initial load. Once warmed up, all interactions and API calls will respond immediately.
+
 ### 1. Installation
 Clone repository and install dependencies:
 ```bash
-git clone https://github.com/furydarkknight/techfusion-brand-governance2.git
-cd techfusion-brand-governance2
+git clone https://github.com/furydarkknight/techfusion-brand-governance3.git
+cd techfusion-brand-governance3
 pip install -r requirements.txt
 ```
 
