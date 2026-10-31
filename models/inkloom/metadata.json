@@ -1,0 +1,40 @@
+{
+    "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "encoder_weights": "unmodified (no fine-tuning)",
+    "encoder_runtime": "ONNX (onnxruntime, no PyTorch required)",
+    "classifier": "LogisticRegression",
+    "trained_by": "Team TechFusion",
+    "training_dataset": "inkloom_marketing_quality_dataset.csv",
+    "training_samples": 1500,
+    "training_samples_per_class": 500,
+    "classes": [
+        "BAD",
+        "GOOD",
+        "NEEDS_CONTEXT"
+    ],
+    "embedding_dimensions": 384,
+    "held_out_evaluation": {
+        "samples": 150,
+        "samples_per_class": 50,
+        "random_seed": 42,
+        "macro_f1": 0.9535,
+        "accuracy": 0.9533,
+        "per_class": {
+            "BAD":           {"precision": 1.0000, "recall": 0.9800, "f1": 0.9899},
+            "GOOD":          {"precision": 0.9231, "recall": 0.9600, "f1": 0.9412},
+            "NEEDS_CONTEXT": {"precision": 0.9388, "recall": 0.9200, "f1": 0.9293}
+        },
+        "confusion_matrix": {
+            "labels": ["BAD", "GOOD", "NEEDS_CONTEXT"],
+            "matrix": [[49, 0, 1], [0, 48, 2], [0, 4, 46]]
+        }
+    },
+    "bad_decision_threshold": 0.40,
+    "logistic_regression_params": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "n_iter_converged": 18,
+        "solver": "lbfgs",
+        "multi_class": "multinomial"
+    }
+}
